@@ -1,3 +1,13 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/keerthanad1105-2005/handwritten-text-recognition)
+![GitHub stars](https://img.shields.io/github/stars/keerthanad1105-2005/handwritten-text-recognition?style=social)
+![GitHub forks](https://img.shields.io/github/forks/keerthanad1105-2005/handwritten-text-recognition?style=social)
+![GitHub issues](https://img.shields.io/github/issues/keerthanad1105-2005/handwritten-text-recognition)
+![GitHub license](https://img.shields.io/github/license/keerthanad1105-2005/handwritten-text-recognition)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green.svg)
+![Deployed on Render](https://img.shields.io/badge/Deployed-Render-blueviolet)
+
+
 # ✍️ Handwritten Text Recognition Web App
 
 A full-stack web application that extracts text from handwritten images using **Tesseract OCR**, **OpenCV**, and **Flask**.
@@ -296,3 +306,11 @@ MIT License — free to use, modify, and deploy.
 - [OpenCV](https://opencv.org/)
 - [Flask](https://flask.palletsprojects.com/)
 - [Render](https://render.com/) for free hosting
+
+##AUTHOR
+
+-KEERTHANA D
+
+#### 🚀 Live Demo
+Try the deployed project here:  
+👉  https://handwritten-text-recognition-3.onrender.com/
