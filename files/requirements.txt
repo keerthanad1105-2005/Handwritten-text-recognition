@@ -1,25 +1,3 @@
-# ──────────────────────────────────────────────
-# Handwritten Text Recognition — Python Dependencies
-# Install with: pip install -r requirements.txt
-# ──────────────────────────────────────────────
-
-# Web framework
-flask==3.0.3
-
-# WSGI production server (used by Render/Heroku)
-gunicorn==22.0.0
-
-# OCR engine Python wrapper
-pytesseract==0.3.13
-
-# Image processing
-opencv-python-headless==4.10.0.84
-
-# Image handling (used by pytesseract internally)
-Pillow==10.4.0
-
-# Numerical computing (required by OpenCV)
-numpy==1.26.4
-
-# Werkzeug (Flask dependency — pinned for stability)
-Werkzeug==3.0.3
+ flask
+requests
+gunicorn
