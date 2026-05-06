@@ -15,7 +15,29 @@ A full-stack web application that extracts text from handwritten images using **
 Upload a photo of handwritten notes, letters, or documents — the app processes the image and returns the detected text instantly.
 
 ---
+✍️ Project Description (Professional Version)
 
+This project is a Handwritten Text Recognition Web Application designed to accurately convert handwritten input into machine-readable text using image processing and Optical Character Recognition (OCR) techniques. The system leverages Flask as a lightweight web framework along with OpenCV for image preprocessing and Tesseract OCR for text extraction.
+
+The application allows users to upload images of handwritten text, which are then processed through a series of steps including noise removal, grayscale conversion, thresholding, and segmentation to improve recognition accuracy. The extracted text is displayed in real time through a clean and user-friendly web interface.
+
+This project demonstrates practical implementation of computer vision and machine learning concepts in a real-world use case, making it suitable for document digitization, educational tools, and automation systems.
+
+🚀 Key Highlights:
+End-to-end web application using Flask backend
+Image preprocessing using OpenCV for improved OCR accuracy
+Text extraction using Tesseract OCR engine
+Simple and interactive user interface
+Real-time handwritten text recognition from uploaded images
+🎯 Objective:
+
+To build an efficient system that bridges the gap between handwritten content and digital text, enabling faster data entry and document processing.
+
+💼 Use Cases:
+Digitizing handwritten notes
+Automating data entry from forms
+Educational tools for learning OCR and computer vision
+Archiving handwritten documents
 ## 📸 Features
 
 - 📤 Drag-and-drop or click-to-upload image interface
@@ -28,6 +50,9 @@ Upload a photo of handwritten notes, letters, or documents — the app processes
 - 🚀 Ready to deploy on **Render** (free tier)
 
 ---
+##SYSTEM ARCHITECTURE DIAGRAM
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1c82a847-cb63-4f2d-b474-2407a58be6b3" />
 
 ## 🗂️ Project Structure
 
