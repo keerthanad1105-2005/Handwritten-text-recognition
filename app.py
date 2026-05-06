@@ -5,9 +5,7 @@ Backend: Flask + pytesseract + OpenCV
 Author: Generated for GitHub/Render deployment
 """
 
-import os
-import cv2
-import numpy as np
+import os 
 import pytesseract
 from flask import Flask, request, jsonify, render_template
 from werkzeug.utils import secure_filename
@@ -38,45 +36,6 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 def allowed_file(filename):
     """Check if uploaded file has an allowed extension."""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-
-def preprocess_image(image_bytes):
-    """
-    Preprocess the image for better OCR accuracy.
-    Steps:
-      1. Convert to grayscale
-      2. Apply Gaussian blur to reduce noise
-      3. Apply adaptive thresholding for binarization
-      4. Deskew if needed (basic sharpening)
-    Returns: processed NumPy image array
-    """
-    # Decode image bytes to numpy array
-    nparr = np.frombuffer(image_bytes, np.uint8)
-    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-
-    if img is None:
-        raise ValueError("Could not decode image. Please upload a valid image file.")
-
-    # Step 1: Convert to grayscale
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-    # Step 2: Noise reduction with Gaussian blur
-    blurred = cv2.GaussianBlur(gray, (3, 3), 0)
-
-    # Step 3: Adaptive thresholding — handles uneven lighting in handwritten images
-    thresh = cv2.adaptiveThreshold(
-        blurred, 255,
-        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-        cv2.THRESH_BINARY,
-        11, 2
-    )
-
-    # Step 4: Morphological dilation to slightly thicken text strokes
-    kernel = np.ones((1, 1), np.uint8)
-    processed = cv2.dilate(thresh, kernel, iterations=1)
-
-    return processed
-
 
 def extract_text(processed_img):
     """
